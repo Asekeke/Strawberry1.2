@@ -93,7 +93,7 @@ input:-webkit-autofill:focus {
 	height: calc(1.5em + 1rem + 2px);
 }
 a {
-	color: #009ce7;
+	color: #8300e7;
 }
 input,
 button,
@@ -1430,7 +1430,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 .user-menu.nav > li > a:hover i,
 .user-menu.nav > li > a:focus i {
-	color: #18aefa;
+	color: #5418fa;
 }
 .user-img {
 	margin-right: 3px;
@@ -1472,13 +1472,13 @@ div.dataTables_wrapper div.dataTables_info {
 	padding: 10px 18px;
 }
 .header .dropdown-menu > li > a i {
-	color: #FFBC53;
+	color: #ff5361;
 	margin-right: 10px;
 	text-align: center;
 	width: 18px;
 }
 .header .user-menu .dropdown-menu > li > a i {
-	color: #FFBC53;
+	color: #ff5361;
 	font-size: 16px;
 	margin-right: 10px;
 	min-width: 18px;
