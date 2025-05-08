@@ -122,7 +122,7 @@
                 </div>
               </div>
               <div class="col-xl-6 col-lg-5 d-none d-lg-block">
-                {% comment %} <div class="header-inner-end text-md-end">
+                 <div class="header-inner-end text-md-end">
                   <div class="ovic-menu-wrapper">
                     <ul>
                       <li><a href="about.html">About Us</a></li>
@@ -224,7 +224,7 @@
                   </div>
 
                   {% endif %}
-                  {% comment %} <div class="block-wishlist action">
+                   <div class="block-wishlist action">
                     <a class="icon-link" href="wishlist.html">
                       <i class="flaticon-heart"></i>
                       <span class="count">0</span>
@@ -243,7 +243,7 @@
                         $00.00
                       </span>
                     </a>
-                    {% comment %} <div class="cart">
+                     <div class="cart">
                       <div class="cart__mini">
                         <ul>
                           <li>
@@ -323,88 +323,162 @@
     {% endblock dashboard-content %}
     </div>
     </main>
+<!-- footer-start -->
+<footer>
+  <div class="fotter-area d-dark-bg">
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-content pt-55 pb-45">
+          <div class="row">
+            <div class="col-xl-12">
+              <!-- Berry Social Hub -->
+              <div class="footer-social text-center mb-30">
+                <h4 class="text-white mb-20">Join the Berry Patch!</h4>
+                <div class="social-icons">
+                  <a href="#" class="berry-social"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="berry-social"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="berry-social"><i class="fab fa-pinterest-p"></i></a>
+                  <a href="#" class="berry-social"><i class="fab fa-tiktok"></i></a>
+                </div>
+              </div>
 
-    <!-- footer-start -->
-    <footer>
-      <div class="fotter-area d-dark-bg">
-        
-        <div class="footer__bottom">
-          <div class="container">
-            <div class="footer__bottom-content pt-55 pb-45">
-              <div class="row">
-                <div class="col-xl-12">
-                  <div class="footer__links text-center mb-25">
-                    <p>
-                      <a href="#">Online Shopping</a>
-                      <a href="#">Promotions</a>
-                      <a href="#">My Orders</a>
-                      <a href="#">Help</a>
-                      <a href="#">Customer Service</a>
-                      <a href="#">Support</a>
-                      <a href="#">Most Populars</a>
-                      <a href="#">New Arrivals</a>
-                      <a href="#">Special Products </a>
-                      <a href="#">Manufacturers</a>
-                      <br />
-                      <a href="#">Garden Equipments</a>
-                      <a href="#">Powers And Hand Tools </a>
-                      <a href="#">Utensil &amp; Gadget </a>
-                      <a href="#">Printers</a>
-                      <a href="#">Projectors</a>
-                      <a href="#">Scanners</a>
-                      <a href="#">Store</a>
-                      <a href="#">Business</a>
-                    </p>
+              <!-- Sweet Newsletter -->
+              <div class="berry-newsletter text-center mb-30">
+                <h4 class="text-white mb-20">Get Juicy Deals!</h4>
+                <form class="newsletter-form">
+                  <input type="email" placeholder="Your email..." class="berry-input">
+                  <button type="submit" class="berry-btn">Pick My Discount 🍓</button>
+                </form>
+                <p class="text-muted mt-10">Weekly sweet offers delivered to your inbox</p>
+              </div>
+
+              <!-- Quick Links - Reorganized -->
+              <div class="footer-links-grid mb-30">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h5 class="text-white">Berry Shopping</h5>
+                    <ul>
+                      <li><a href="#">Seasonal Picks</a></li>
+                      <li><a href="#">Organic Collection</a></li>
+                      <li><a href="#">Gift Boxes</a></li>
+                    </ul>
                   </div>
-                  <div class="payment-image text-center mb-25">
-                    <a href="#"
-                      ><img
-                        src="{% static 'assets/img/payment/payment.png' %}"
-                        alt=""
-                    /></a>
+                  <div class="col-md-3">
+                    <h5 class="text-white">Our Roots</h5>
+                    <ul>
+                      <li><a href="#">About Our Farm</a></li>
+                      <li><a href="#">Sustainability</a></li>
+                      <li><a href="#">Meet the Growers</a></li>
+                    </ul>
                   </div>
-                  <div class="copy-right-area text-center">
-                    <p>
-                      Copyright © <span>DukaMarket.</span> All Rights Reserved.
-                      Powered by
-                      <a href="#"
-                        ><span class="main-color">Theme_Pure.</span></a
-                      >
-                    </p>
+                  <div class="col-md-3">
+                    <h5 class="text-white">Help Center</h5>
+                    <ul>
+                      <li><a href="#">Shipping Policy</a></li>
+                      <li><a href="#">Freshness Guarantee</a></li>
+                      <li><a href="#">Contact Our Farmers</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3">
+                    <h5 class="text-white">Berry Rewards</h5>
+                    <ul>
+                      <li><a href="#">Join Our Club</a></li>
+                      <li><a href="#">Earn Points</a></li>
+                      <li><a href="#">Refer a Friend</a></li>
+                    </ul>
                   </div>
                 </div>
+              </div>
+
+              <!-- Payment & Copyright -->
+              <div class="payment-image text-center mb-25">
+                <p class="text-white mb-2">We accept:</p>
+                <img src="{% static 'assets/img/payment/payment.png' %}" alt="Payment methods">
+              </div>
+              <div class="copy-right-area text-center">
+                <p class="text-muted">
+                  © <span id="current-year"></span> Strawberry
+                  Grown with <i class="fas fa-heart text-danger"></i> in California.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- footer-end -->
+    </div>
+  </div>
+</footer>
+<!-- footer-end -->
 
-    <!-- JS here -->
-    <script src="{% static 'assets/js/vendor/jquery.js' %}"></script>
-    <script src="{% static 'assets/js/vendor/waypoints.js' %}"></script>
-    <script src="{% static 'assets/js/bootstrap-bundle.js' %}"></script>
-    <script src="{% static 'assets/js/meanmenu.js' %}"></script>
-    <script src="{% static 'assets/js/swiper-bundle.js' %}"></script>
-    <script src="{% static 'assets/js/tweenmax.js' %}"></script>
-    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
-    <script src="{% static 'assets/js/magnific-popup.js' %}"></script>
-    <script src="{% static 'assets/js/parallax.js' %}"></script>
-    <script src="{% static 'assets/js/backtotop.js' %}"></script>
-    <script src="{% static 'assets/js/nice-select.js' %}"></script>
-    <script src="{% static 'assets/js/countdown.min.js' %}"></script>
-    <script src="{% static 'assets/js/counterup.js' %}"></script>
-    <script src="{% static 'assets/js/ui-slider-range.js' %}"></script>
-    <script src="{% static 'assets/js/wow.js' %}"></script>
-    <script src="{% static 'assets/js/isotope-pkgd.js' %}"></script>
-    <script src="{% static 'assets/js/imagesloaded-pkgd.js' %}"></script>
-    <script src="{% static 'assets/js/ajax-form.js' %}"></script>
-    <script src="{% static 'assets/js/main.js' %}"></script>
+<style>
+  /* Berry-themed styles */
+  .berry-social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #ff4d6d;
+    color: white;
+    border-radius: 50%;
+    margin: 0 8px;
+    transition: all 0.3s;
+  }
 
+  .berry-social:hover {
+    background: #ff8fa3;
+    transform: translateY(-3px);
+  }
 
+  .berry-input {
+    padding: 12px 20px;
+    border: 2px solid #ffccd5;
+    border-radius: 30px;
+    width: 300px;
+    max-width: 100%;
+  }
 
-  </body>
+  .berry-btn {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin-left: 10px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
 
-  <!-- Mirrored from themepure.net/template/dukamarket/dukamarket/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Feb 2022 17:22:33 GMT -->
-</html>
+  .berry-btn:hover {
+    background: #c9184a;
+  }
+
+  .footer-links-grid h5 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links-grid h5:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: #ff4d6d;
+  }
+
+  .footer-links-grid ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-links-grid ul li a:hover {
+    color: #ff4d6d !important;
+    padding-left: 5px;
+  }
+</style>
+
+<script>
+  // Auto-update copyright year
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
