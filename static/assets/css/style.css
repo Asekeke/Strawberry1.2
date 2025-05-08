@@ -1,10 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Duka Market - Clean, Minimal E-commerce HTML5 Template
-    Author: Theme Pure
-    Support: basictheme@gmail.com
-    Description: Duka Market - Clean, Minimal E-commerce HTML5 Template
-    Version: 1.0
+
 
 -----------------------------------------------------------------------------------
 
@@ -380,7 +376,7 @@ input {
 }
 
 .d-blue-bg {
-  background-color: #263C97;
+  background-color: #8300e7;
 }
 
 .d-dark-bg {
@@ -433,7 +429,7 @@ input {
 .wc-cart {
   display: inline-block;
   width: 100%;
-  background: #fcbe00;
+  background: #c21859;
   color: #ffffff;
   padding: 10px 0;
   font-size: 16px;
@@ -464,7 +460,7 @@ input {
   background: #fcbe00;
   color: #ffffff;
   color: #222;
-  border-color: #fcbe00;
+  border-color: #c21859;
 }
 
 .wc-checkout {
@@ -1029,34 +1025,27 @@ input {
   color: #ffffff;
 }
 
-/*----------------------------------------*/
-/* 09. animation CSS
-/*----------------------------------------*/
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+
+<style id="strawberry-animation">
+  /* Полное удаление старой анимации */
+  [class*="animation"],
+  [class*="pulse"] {
+    animation: none !important;
   }
-  70% {
-    -webkit-box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+
+  /* Новая клубничная анимация */
+  .strawberry-loader {
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23ff2e63" d="M50 5q25-5 35 20t-5 35q-15 15-30 35T50 5z"/><path fill="%23a8e6cf" d="M30 40q5-5 15-5t15 5q-5 5-15 5t-15-5z"/></svg>');
+    animation: strawberry-spin 1.2s linear infinite;
   }
-  100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+
+  @keyframes strawberry-spin {
+    100% { transform: rotate(360deg); }
   }
-}
-@keyframes pulse {
-  0% {
-    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-  }
-  70% {
-    -moz-box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
-    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
-  }
-  100% {
-    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-  }
-}
+</style>
 /*----------------------------------------*/
 /*  10. header CSS
 /*----------------------------------------*/
@@ -2373,7 +2362,7 @@ input {
   height: 45px;
   width: 45px;
   line-height: 45px;
-  background: #fcbe00;
+  background: #c21859;
   color: #fff;
   border-radius: 50%;
 }
@@ -2515,7 +2504,7 @@ input {
 .page-banner-area::before {
   position: absolute;
   content: "";
-  background: #0e2641;
+  background: #8300e7;
   opacity: 0.3;
   width: 100%;
   height: 100%;
@@ -2603,7 +2592,7 @@ input {
 }
 .features__icon i {
   font-size: 40px;
-  color: #fcbe00;
+  color: #c21859;
 }
 .features__content h6 {
   font-size: 13px;
@@ -2679,7 +2668,7 @@ input {
 }
 .banner__content span {
   font-size: 16px;
-  color: #fcbe00;
+  color: #8300e7;
   display: inline-block;
   margin-bottom: 10px;
 }
@@ -2697,7 +2686,7 @@ input {
   }
 }
 .banner__content h6:hover {
-  color: #fcbe00;
+  color: #c21859;
 }
 .banner__content p {
   color: #ffffff;
@@ -2740,7 +2729,7 @@ input {
   color: #16bcdc;
 }
 .banner__content-3 .df-title:hover {
-  color: #fcbe00;
+  color: #c21859;
 }
 .banner__content-3 .bottom-btn {
   position: absolute;
@@ -4339,7 +4328,7 @@ input {
   color: #222;
 }
 .product__details-des-tab .nav-tabs .nav-item .nav-link.active::after, .product__details-des-tab .nav-tabs .nav-item .nav-link:hover::after {
-  background-color: #fcbe00;
+  background-color: #c21859;
 }
 .product__details-des-tab .nav-tabs .nav-item .nav-link:hover::after {
   width: 100%;
@@ -4525,7 +4514,7 @@ input {
   font-size: 14px;
 }
 .add-review-option a:hover {
-  color: #fcbe00;
+  color: #c21859;
 }
 
 .comment-title h3 {
@@ -4550,7 +4539,7 @@ input {
 
 .comment-rating ul li a {
   font-size: 14px;
-  color: #fcbe00;
+  color: #c21859;
 }
 
 .comment-rating ul {
@@ -4605,7 +4594,7 @@ input {
   padding: 20px;
 }
 .comment-input input:focus {
-  border: 1px solid #fcbe00;
+  border: 1px solid #c21859;
 }
 
 .comment-input input::placeholder {
@@ -4629,7 +4618,7 @@ input {
   margin-bottom: 15px;
 }
 .comment-textarea:focus {
-  border: 1px solid #fcbe00;
+  border: 1px solid #c21859;
 }
 
 .comment-textarea::placeholder {
@@ -4664,7 +4653,7 @@ input {
 
 .about-content span {
   font-size: 14px;
-  color: #fcbe00;
+  color: #c21859;
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
@@ -4710,7 +4699,7 @@ input {
 }
 .services-item .services-icon i {
   font-size: 55px;
-  color: #fcbe00;
+  color: #c21859;
 }
 .services-item h6 {
   font-size: 18px;
@@ -5028,14 +5017,14 @@ input {
   font-size: 14px;
 }
 .basic-login .forgot-login a:hover {
-  color: #fcbe00;
+  color: #c21859;
 }
 .basic-login .login-action p a {
   font-style: italic;
   text-decoration: underline;
 }
 .basic-login .login-action p a:hover {
-  color: #fcbe00;
+  color: #c21859;
 }
 
 /*----------------------------------------*/
@@ -5937,7 +5926,7 @@ input {
 }
 
 .table-content table td.product-name a:hover {
-  color: #fcbe00;
+  color: #c21859;
 }
 
 .table-content table td {
@@ -6105,7 +6094,7 @@ td.product-thumbnail img {
 }
 
 .coupon-info p.form-row-first label span.required, .coupon-info p.form-row-last label span.required {
-  color: red;
+  color: rgba(222, 63, 63, 0.87);
   font-weight: 700;
 }
 
@@ -6120,11 +6109,11 @@ td.product-thumbnail img {
   box-shadow: none;
 }
 .coupon-info p.form-row-first input:focus, .coupon-info p.form-row-last input:focus {
-  border-color: #fcbe00;
+  border-color: #c21859;
 }
 
 .coupon-info p.form-row input[type=submit]:hover, p.checkout-coupon input[type=submit]:hover {
-  background: #fcbe00 none repeat scroll 0 0;
+  background: #c21859 none repeat scroll 0 0;
 }
 
 .coupon-info p.form-row input[type=checkbox] {
@@ -6253,7 +6242,7 @@ p.checkout-coupon input[type=text]::placeholder {
   box-shadow: none;
 }
 .checkout-form-list input[type=text]:focus, .checkout-form-list input[type=password]:focus, .checkout-form-list input[type=email]:focus {
-  border-color: #fcbe00;
+  border-color: #c21859;
 }
 
 .checkout-form-list input[type=text]::-moz-placeholder,
@@ -6300,7 +6289,7 @@ p.checkout-coupon input[type=text]::placeholder {
   outline: none;
 }
 .order-notes textarea:focus {
-  border-color: #fcbe00;
+  border-color: #c21859;
 }
 
 .order-notes textarea::-moz-placeholder {
@@ -6482,7 +6471,7 @@ p.checkout-coupon input[type=text]::placeholder {
 }
 
 .order-button-payment input:hover {
-  background: #fcbe00 none repeat scroll 0 0;
+  background: #c21859 none repeat scroll 0 0;
 }
 
 .payment-method .btn-link {
@@ -6618,7 +6607,7 @@ p.checkout-coupon input[type=text]::placeholder {
   font-weight: 500;
 }
 .mean-container .mean-nav ul li a:hover {
-  color: #fcbe00;
+  color: #c21859;
 }
 
 .mean-container .mean-nav ul li a.mean-expand {
@@ -6635,9 +6624,9 @@ p.checkout-coupon input[type=text]::placeholder {
   font-weight: 400;
 }
 .mean-container .mean-nav ul li a.mean-expand:hover {
-  background: #fcbe00;
+  background: #c21859;
   color: #ffffff;
-  border-color: #fcbe00;
+  border-color: #c21859;
 }
 
 .mean-container .mean-nav ul li > a > i {
