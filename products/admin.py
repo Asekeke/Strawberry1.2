@@ -37,7 +37,7 @@ class CartModelAdmin(admin.ModelAdmin):
 
 super_admin_site.register(Industry)
 super_admin_site.register(Categories)
-super_admin_site.register(SubCategories)
+#super_admin_site.register(SubCategories)
 super_admin_site.register(Product,ProductAdmin)
 #super_admin_site.register(ProductImage)
 #super_admin_site.register(ProductAditionalInformation)
