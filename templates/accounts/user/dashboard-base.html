@@ -14,7 +14,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="{% static 'assets/img/favicon.png' %}"
+      href="{% static 'assets/img/favicon.ico' %}"
     />
     <!-- CSS here -->
     <link rel="stylesheet" href="{% static 'assets/css/preloader.css' %}" />
@@ -114,10 +114,7 @@
                   <div class="header__currency border-right"></div>
                   <div class="header__lang border-right"></div>
                   <div class="support d-none d-sm-block">
-                    <p>
-                      Need Help?
-                      <a href="tel:+001123456789">+001 123 456 789</a>
-                    </p>
+
                   </div>
                 </div>
               </div>
@@ -150,9 +147,13 @@
                         src="{% static 'assets/img/logo/logo1.svg' %}"
                         alt="logo"
                     /> {% endcomment %}
-                    <h4 class='text-white fw-bold'>MultiVendorEshop</h4>
-                  </a>
-                  </div>
+
+                            <div class="header-logo">
+          <a href="{% url 'home' %}" class="logo-link">
+            <span class="logo-icon">🍓</span>
+            <span class="logo-text">STRAWBERRY</span>
+          </a>
+        </div>
                 </div>
               </div>
               <div class="col-xl-5 col-lg-4 d-none d-lg-block">
