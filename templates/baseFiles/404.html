@@ -649,53 +649,99 @@
 
         <!-- cta-area-start -->
         <section class="cta-area d-ldark-bg pt-55 pb-10">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cta-item cta-item-d mb-30">
-                            <h5 class="cta-title">Follow Us</h5>
-                            <p>We make consolidating, marketing and tracking your social media website easy.</p>
-                            <div class="cta-social">
-                                <div class="social-icon">
-                                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
-                                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" class="rss"><i class="fas fa-rss"></i></a>
-                                    <a href="#" class="dribbble"><i class="fab fa-dribbble"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cta-item mb-30">
-                            <h5 class="cta-title">Sign Up To Newsletter</h5>
-                            <p>Join 60.000+ subscribers and get a new discount coupon  on every Saturday.</p>
-                            <div class="subscribe__form">
-                                <form action="#">
-                                    <input type="email" placeholder="Enter your email here...">
-                                    <button>subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cta-item mb-30">
-                            <h5 class="cta-title">Download App</h5>
-                            <p>DukaMarket App is now available on App Store & Google Play. Get it now.</p>
-                            <div class="cta-apps">
-                                <div class="apps-store">
-                                    <a href="#"><img src="{% staticfiles 'assets/img/brand/app_ios.png' %}" alt=""></a>
-                                    <a href="#"><img src="{% staticfiles 'assets/img/brand/app_android.png' %}" alt=""></a>
-                                </div>
-                            </div>
+    <div class="container">
+        <div class="row">
+            <!-- Первая колонка (соцсети) -->
+            <div class="col-lg-4 col-md-6">
+                <div class="cta-item cta-item-d mb-30">
+                    <h5 class="cta-title" style="color: #ff2e63;">Join Our Community</h5>
+                    <p style="color: #b8b8b8;">Follow us for exclusive deals</p>
+                    <div class="cta-social">
+                        <div class="social-icon" style="display: flex; gap: 12px;">
+                            <a href="#" style="background: #ff2e63;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="background: #ff2e63;"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" style="background: #ff2e63;"><i class="fab fa-telegram"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </section>
-        <!-- cta-area-end -->
+            <!-- Вторая колонка (email подписка) -->
+            <div class="col-lg-4 col-md-6">
+                <div class="cta-item mb-30">
+                    <h5 class="cta-title" style="color: #ff2e63;">Email Newsletter</h5>
+                    <p style="color: #b8b8b8;">Get weekly discounts</p>
+                    <div class="subscribe__form">
+                        <form action="#">
+                            <input type="email" placeholder="Your email...">
+                            <button style="background: #ff2e63;">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Третья колонка (кнопки приложений) -->
+            <div class="col-lg-4 col-md-6">
+                <div class="cta-item mb-30">
+                    <h5 class="cta-title" style="color: #ff2e63;">Mobile App</h5>
+                    <p style="color: #b8b8b8;">Download for free</p>
+                    <div class="cta-apps">
+                        <div class="apps-store" style="display: flex; flex-direction: column; gap: 10px;">
+                            <a href="#" style="display: inline-block; background: #ff2e63; color: white; padding: 8px 15px; border-radius: 6px; text-align: center; font-size: 14px;">
+                                <i class="fab fa-apple"></i> App Store
+                            </a>
+                            <a href="#" style="display: inline-block; background: #ff2e63; color: white; padding: 8px 15px; border-radius: 6px; text-align: center; font-size: 14px;">
+                                <i class="fab fa-google-play"></i> Google Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Общие стили для иконок */
+.cta-item a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Стили для социальных иконок */
+.social-icon a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для кнопок приложений */
+.apps-store a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Эффекты при наведении */
+.cta-item a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 46, 99, 0.3);
+    opacity: 0.9;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .apps-store {
+        flex-direction: row !important;
+        justify-content: center;
+    }
+}
+</style>
 
     </main>
 
