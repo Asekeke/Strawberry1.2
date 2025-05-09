@@ -6686,14 +6686,14 @@ p.checkout-coupon input[type=text]::placeholder {
   font-style: italic;
 }
 .footer__widget-content .provide-text a:hover {
-  color: #16bcdc;
+  color: rgba(114, 94, 198, 0.81);
 }
 .footer__hotline .icon i {
   font-size: 55px;
-  color: #fcbe00;
+  color: #c21859;
 }
 .footer__hotline .icon-2 i {
-  color: #16bcdc;
+  color: rgba(114, 94, 198, 0.81);
 }
 .footer__hotline .text h4 {
   font-size: 14px;
@@ -6703,10 +6703,10 @@ p.checkout-coupon input[type=text]::placeholder {
 .footer__hotline .text span {
   font-size: 18px;
   font-weight: 500;
-  color: #fcbe00;
+  color: #c21859;
 }
 .footer__hotline .text-2 span {
-  color: #16bcdc;
+  color: rgba(114, 94, 198, 0.81);
 }
 .footer__hotline-4 .icon i {
   color: #ffffff;
@@ -6742,7 +6742,7 @@ p.checkout-coupon input[type=text]::placeholder {
   }
 }
 .footer__link ul li a:hover {
-  color: #fcbe00;
+  color: #c21859;
   padding-left: 5px;
 }
 .footer__link-2 ul li a {
@@ -6758,7 +6758,7 @@ p.checkout-coupon input[type=text]::placeholder {
   color: #999;
 }
 .footer__link-2 ul li a:hover {
-  color: #16bcdc;
+  color: #c21859;
 }
 .footer__links p {
   margin-bottom: 0;
@@ -6785,7 +6785,7 @@ p.checkout-coupon input[type=text]::placeholder {
   top: -3px;
 }
 .footer__links p a:hover {
-  color: #fcbe00;
+  color: #c21859;
 }
 .footer__links p a:last-child::before {
   display: none;
@@ -6794,7 +6794,7 @@ p.checkout-coupon input[type=text]::placeholder {
   content: "|";
 }
 .footer__links-d p a:hover {
-  color: #16bcdc;
+  color: #c21859;
 }
 .footer__bottom-content {
   border-top: 1px solid #FFFFFF1A;
@@ -6821,7 +6821,7 @@ p.checkout-coupon input[type=text]::placeholder {
   transition: 0.3s;
 }
 .footer__newsletter-form .ft-newsl:focus {
-  border: 1px solid #16bcdc;
+  border: 1px solid #c21859;
 }
 .footer__newsletter-form .ft-newsl::-moz-placeholder {
   color: #666;
@@ -6835,7 +6835,7 @@ p.checkout-coupon input[type=text]::placeholder {
 }
 .footer__newsletter-form .ft-newsl-btn {
   position: absolute;
-  background: #16bcdc;
+  background: rgba(114, 94, 198, 0.81);
   color: #ffffff;
   padding: 12px 32px;
   font-size: 13px;
@@ -6863,12 +6863,12 @@ p.checkout-coupon input[type=text]::placeholder {
   color: #999;
 }
 .copy-right-area p span {
-  color: #fcbe00;
+  color: #c21859;
   display: inline-block;
 }
 
 .copy-right-area-2 p span {
-  color: #16bcdc;
+  color: rgba(114, 94, 198, 0.81);
 }
 
 .payment-image img {
