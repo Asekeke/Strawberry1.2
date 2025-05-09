@@ -228,10 +228,7 @@
                   <div class="header__currency border-right"></div>
                   <div class="header__lang border-right"></div>
                   <div class="support d-none d-sm-block">
-                    <p>
-                      Need Help?
-                      <a href="tel:+001123456789">+001 123 456 789</a>
-                    </p>
+
                   </div>
                 </div>
               </div>
@@ -638,8 +635,7 @@
                             <li><a href="#">How to use Account</a></li>
                             <li><a href="#">Placing an Order</a></li>
                             <li><a href="#">Payment Methods</a></li>
-                            <li><a href="#">Delivery &amp; Dispatch</a></li>
-                            <li><a href="#">Problems with Order</a></li>
+
                           </ul>
                         </div>
                       </div>
@@ -659,9 +655,8 @@
                               >
                             </li>
                             <li><a href="{% url 'vendor_admin_site:login' %}">Login as Seller</a></li>
-                            <li><a href="#">Report Abuse</a></li>
-                            <li><a href="#">Submit a Dispute</a></li>
-                            <li><a href="#">Policies &amp; Rules</a></li>
+
+
                           </ul>
                         </div>
                       </div>
@@ -686,10 +681,8 @@
                                   <li><a href="#">Checkout</a></li>
                                   <li><a href="#">Shopping Cart</a></li>
                                   <li><a href="#">Wishlist</a></li>
-                                  <li>
-                                    <a href="#">Terms &amp; Conditions &amp;</a>
-                                  </li>
-                                  <li><a href="#">Redeem Voucher</a></li>
+
+
                                 </ul>
                               </div>
                             </div>
@@ -711,7 +704,7 @@
                                       >Order Tracking</a
                                     >
                                   </li>
-                                  <li><a href="#">FAQs</a></li>
+
                                 </ul>
                               </div>
                             </div>
@@ -738,11 +731,10 @@ This isn’t just a marketplace. It’s your marketplace.
                               <i class="fal fa-headset"></i>
                             </div>
                             <div class="text">
-                              <h4>Got Question? Call us 24/7!</h4>
+                              <h4>Got Question? Call us 24/7! 🍓</h4>
                               <span
-                                ><a href="tel:100-123-456-7890"
-                                  >(+100) 123 456 7890</a
-                                ></span
+                                ><a href="tel:707777777"
+                                  >(+777)777 77 77</a> </span
                               >
                             </div>
                           </div>
@@ -753,8 +745,8 @@ This isn’t just a marketplace. It’s your marketplace.
                                   >Add:
                                   <a
                                     target="_blank"
-                                    href="https://goo.gl/maps/c82DDZ8ALvL878Bv8"
-                                    >Walls Street 68, Mahattan, New York, USA</a
+                                    href="https://maps.app.goo.gl/RYVdubCGggL7Tmsj8"
+                                    >Almaty,Kazakhstan</a
                                   ></span
                                 >
                               </li>
@@ -777,36 +769,73 @@ This isn’t just a marketplace. It’s your marketplace.
                   <div class="footer__links text-center mb-25">
                     <p>
                       <a href="#">Online Shopping</a>
-                      <a href="#">Promotions</a>
+
                       <a href="#">My Orders</a>
                       <a href="#">Help</a>
                       <a href="#">Customer Service</a>
-                      <a href="#">Support</a>
-                      <a href="#">Most Populars</a>
-                      <a href="#">New Arrivals</a>
-                      <a href="#">Special Products </a>
-                      <a href="#">Manufacturers</a>
+
+
+
                       <br />
-                      <a href="#">Garden Equipments</a>
-                      <a href="#">Powers And Hand Tools </a>
-                      <a href="#">Utensil &amp; Gadget </a>
-                      <a href="#">Printers</a>
-                      <a href="#">Projectors</a>
-                      <a href="#">Scanners</a>
+
                       <a href="#">Store</a>
-                      <a href="#">Business</a>
-                    </p>
+
                   </div>
-                  <div class="payment-image text-center mb-25">
-                    <a href="#"
-                      ><img
-                        src="{% static 'assets/img/payment/payment.png' %}"
-                        alt=""
-                    /></a>
-                  </div>
+          <div class="elegant-payment-section">
+  <div class="payment-grid">
+    <!-- Премиальные SVG иконки -->
+    <img src="https://static-00.iconduck.com/assets.00/visa-icon-2048x628-6yzgq2vq.png" alt="Visa">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKZVfAajlD-xBUNAIrKXJ7pj6tastGljgG7oBsKaq_Ln-wZeBUFxrVO1powFmVHg0qQ8&usqp=CAU" alt="Mastercard">
+    <img src="https://crashradar.ru/wp-content/uploads/2023/12/apple-pay.webp" alt="Apple Pay">
+    <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/a/aa/Logo_of_Kaspi_bank.png/1200px-Logo_of_Kaspi_bank.png" alt="Kaspi">
+  </div>
+</div>
+
+<style>
+.elegant-payment-section {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.payment-grid {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.payment-grid img {
+  height: 24px;
+  width: auto;
+  filter: grayscale(1%) brightness(1.5);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0.8;
+}
+
+.payment-grid img:hover {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+@media (max-width: 600px) {
+  .payment-grid {
+    gap: 16px;
+  }
+  .payment-grid img {
+    height: 20px;
+  }
+}
+</style>
                   <div class="copy-right-area text-center">
                     <p>
-                      Copyright © <span>MultiVendorEshop.</span> All Rights Reserved.
+                     <p>Copyright © 2025   <a href="#"> Strawberry </a></p>
 
                     </p>
                   </div>

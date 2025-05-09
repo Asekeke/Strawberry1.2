@@ -227,10 +227,7 @@
                   <div class="header__currency border-right"></div>
                   <div class="header__lang border-right"></div>
                   <div class="support d-none d-sm-block">
-                    <p>
-                      Need Help?
-                      <a href="tel:+001123456789">+001 123 456 789</a>
-                    </p>
+
                   </div>
                 </div>
               </div>
@@ -285,8 +282,7 @@
                       <select>
                         <option>All Categories</option>
                         <option>Best Seller Products</option>
-                        <option>Top 10 Offers</option>
-                        <option>New Arrivals</option>
+
                         <option>Phones &amp; Tablets</option>
                         <option>Electronics &amp; Digital</option>
                         <option>Fashion &amp; Clothings</option>
@@ -447,43 +443,72 @@
               <div class="row">
                 <div class="col-xl-12">
                   <div class="footer__links text-center mb-25">
-                    <p>
-                      <a href="#">Online Shopping</a>
-                      <a href="#">Promotions</a>
+                   <a href="#">Online Shopping</a>
+
                       <a href="#">My Orders</a>
                       <a href="#">Help</a>
                       <a href="#">Customer Service</a>
-                      <a href="#">Support</a>
-                      <a href="#">Most Populars</a>
-                      <a href="#">New Arrivals</a>
-                      <a href="#">Special Products </a>
-                      <a href="#">Manufacturers</a>
+
+
+
                       <br />
-                      <a href="#">Garden Equipments</a>
-                      <a href="#">Powers And Hand Tools </a>
-                      <a href="#">Utensil &amp; Gadget </a>
-                      <a href="#">Printers</a>
-                      <a href="#">Projectors</a>
-                      <a href="#">Scanners</a>
+
                       <a href="#">Store</a>
-                      <a href="#">Business</a>
-                    </p>
                   </div>
-                  <div class="payment-image text-center mb-25">
-                    <a href="#"
-                      ><img
-                        src="{% static 'assets/img/payment/payment.png' %}"
-                        alt=""
-                    /></a>
-                  </div>
+                    <div class="elegant-payment-section">
+  <div class="payment-grid">
+    <!-- Премиальные SVG иконки -->
+    <img src="https://static-00.iconduck.com/assets.00/visa-icon-2048x628-6yzgq2vq.png" alt="Visa">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKZVfAajlD-xBUNAIrKXJ7pj6tastGljgG7oBsKaq_Ln-wZeBUFxrVO1powFmVHg0qQ8&usqp=CAU" alt="Mastercard">
+    <img src="https://crashradar.ru/wp-content/uploads/2023/12/apple-pay.webp" alt="Apple Pay">
+    <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/a/aa/Logo_of_Kaspi_bank.png/1200px-Logo_of_Kaspi_bank.png" alt="Kaspi">
+  </div>
+</div>
+
+<style>
+.elegant-payment-section {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.payment-grid {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.payment-grid img {
+  height: 24px;
+  width: auto;
+  filter: grayscale(1%) brightness(1.5);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0.8;
+}
+
+.payment-grid img:hover {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+@media (max-width: 600px) {
+  .payment-grid {
+    gap: 16px;
+  }
+  .payment-grid img {
+    height: 20px;
+  }
+}
+</style>
                   <div class="copy-right-area text-center">
-                    <p>
-                      Copyright © <span>DukaMarket.</span> All Rights Reserved.
-                      Powered by
-                      <a href="#"
-                        ><span class="main-color">Theme_Pure.</span></a
-                      >
-                    </p>
+                     <p>Copyright © 2025   <a href="#"> Strawberry </a></p>
                   </div>
                 </div>
               </div>
