@@ -14,7 +14,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="{% static 'assets/img/favicon.ico' %}"
+      href="{% static 'assets/img/favicon.png' %}"
     />
     <!-- CSS here -->
     <link rel="stylesheet" href="{% static 'assets/css/preloader.css' %}" />
@@ -52,42 +52,12 @@
       </p>
     <![endif]-->
 
-   <div id="loading">
-    <div id="loading-center">
-        <div id="loading-center-absolute">
-            <div class="spinner"></div>
-        </div>
-    </div>
+    <div id="loading" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999;display:flex;justify-content:center;align-items:center">
+  <div style="width:50px;height:50px;border:3px solid #ddd;border-top-color:#c21859;border-radius:50%;animation:spin 1s linear infinite"></div>
 </div>
 
 <style>
-#loading {
-    position: fixed;
-    z-index: 9999;
-    background: #ffffff; /* белый фон */
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.spinner {
-    width: 60px;
-    height: 60px;
-    border: 6px solid #ffccd5; /* нежно-розовый */
-    border-top: 6px solid #ff4d6d; /* ярко-красный */
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
+  @keyframes spin {to{transform:rotate(360deg)}}
 </style>
 
     <!-- back to top start -->
@@ -119,7 +89,7 @@
                 </div>
               </div>
               <div class="col-xl-6 col-lg-5 d-none d-lg-block">
-                 <div class="header-inner-end text-md-end">
+                {% comment %} <div class="header-inner-end text-md-end">
                   <div class="ovic-menu-wrapper">
                     <ul>
                       <li><a href="about.html">About Us</a></li>
@@ -128,7 +98,7 @@
                       <li><a href="faq.html">FAQs</a></li>
                     </ul>
                   </div>
-                </div>
+                </div> {% endcomment %}
               </div>
             </div>
           </div>
@@ -147,13 +117,9 @@
                         src="{% static 'assets/img/logo/logo1.svg' %}"
                         alt="logo"
                     /> {% endcomment %}
-
-                            <div class="header-logo">
-          <a href="{% url 'home' %}" class="logo-link">
-            <span class="logo-icon">🍓</span>
-            <span class="logo-text">STRAWBERRY</span>
-          </a>
-        </div>
+                    <h4 class='text-white fw-bold'>Strawberry</h4>
+                  </a>
+                  </div>
                 </div>
               </div>
               <div class="col-xl-5 col-lg-4 d-none d-lg-block">
@@ -173,8 +139,7 @@
                       <select>
                         <option>All Categories</option>
                         <option>Best Seller Products</option>
-                        <option>Top 10 Offers</option>
-                        <option>New Arrivals</option>
+
                         <option>Phones &amp; Tablets</option>
                         <option>Electronics &amp; Digital</option>
                         <option>Fashion &amp; Clothings</option>
@@ -225,7 +190,7 @@
                   </div>
 
                   {% endif %}
-                   <div class="block-wishlist action">
+                  {% comment %} <div class="block-wishlist action">
                     <a class="icon-link" href="wishlist.html">
                       <i class="flaticon-heart"></i>
                       <span class="count">0</span>
@@ -234,7 +199,7 @@
                         My Wishlist
                       </span>
                     </a>
-                  </div>
+                  </div> {% endcomment %}
                   <div class="block-cart action">
                     <a class="icon-link" href="{% url 'show_cart' %}">
                       <i class="flaticon-shopping-bag"></i>
@@ -244,7 +209,7 @@
                         $00.00
                       </span>
                     </a>
-                     <div class="cart">
+                    {% comment %} <div class="cart">
                       <div class="cart__mini">
                         <ul>
                           <li>
@@ -300,7 +265,7 @@
                           </li>
                         </ul>
                       </div>
-                    </div>
+                    </div> {% endcomment %}
                   </div>
                 </div>
               </div>
@@ -324,162 +289,117 @@
     {% endblock dashboard-content %}
     </div>
     </main>
-<!-- footer-start -->
-<footer>
-  <div class="fotter-area d-dark-bg">
-    <div class="footer__bottom">
-      <div class="container">
-        <div class="footer__bottom-content pt-55 pb-45">
-          <div class="row">
-            <div class="col-xl-12">
-              <!-- Berry Social Hub -->
-              <div class="footer-social text-center mb-30">
-                <h4 class="text-white mb-20">Join the Berry Patch!</h4>
-                <div class="social-icons">
-                  <a href="#" class="berry-social"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="berry-social"><i class="fab fa-instagram"></i></a>
-                  <a href="#" class="berry-social"><i class="fab fa-pinterest-p"></i></a>
-                  <a href="#" class="berry-social"><i class="fab fa-tiktok"></i></a>
+
+    <!-- footer-start -->
+    <footer>
+      <div class="fotter-area d-dark-bg">
+        
+        <div class="footer__bottom">
+          <div class="container">
+            <div class="footer__bottom-content pt-55 pb-45">
+              <div class="row">
+                <div class="col-xl-12">
+                  <div class="footer__links text-center mb-25">
+                   <a href="#">Online Shopping</a>
+
+                      <a href="#">My Orders</a>
+                      <a href="#">Help</a>
+                      <a href="#">Customer Service</a>
+
+
+
+                      <br />
+
+                      <a href="#">Store</a>
+                  </div>
+                    <div class="elegant-payment-section">
+  <div class="payment-grid">
+    <!-- Премиальные SVG иконки -->
+    <img src="https://static-00.iconduck.com/assets.00/visa-icon-2048x628-6yzgq2vq.png" alt="Visa">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKZVfAajlD-xBUNAIrKXJ7pj6tastGljgG7oBsKaq_Ln-wZeBUFxrVO1powFmVHg0qQ8&usqp=CAU" alt="Mastercard">
+    <img src="https://crashradar.ru/wp-content/uploads/2023/12/apple-pay.webp" alt="Apple Pay">
+    <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/a/aa/Logo_of_Kaspi_bank.png/1200px-Logo_of_Kaspi_bank.png" alt="Kaspi">
+  </div>
+</div>
+
+<style>
+.elegant-payment-section {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.payment-grid {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.payment-grid img {
+  height: 24px;
+  width: auto;
+  filter: grayscale(1%) brightness(1.5);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0.8;
+}
+
+.payment-grid img:hover {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+@media (max-width: 600px) {
+  .payment-grid {
+    gap: 16px;
+  }
+  .payment-grid img {
+    height: 20px;
+  }
+}
+</style>
+                  <div class="copy-right-area text-center">
+                     <p>Copyright © 2025   <a href="#"> Strawberry </a></p>
+                  </div>
                 </div>
-              </div>
-
-              <!-- Sweet Newsletter -->
-              <div class="berry-newsletter text-center mb-30">
-                <h4 class="text-white mb-20">Get Juicy Deals!</h4>
-                <form class="newsletter-form">
-                  <input type="email" placeholder="Your email..." class="berry-input">
-                  <button type="submit" class="berry-btn">Pick My Discount 🍓</button>
-                </form>
-                <p class="text-muted mt-10">Weekly sweet offers delivered to your inbox</p>
-              </div>
-
-              <!-- Quick Links - Reorganized -->
-              <div class="footer-links-grid mb-30">
-                <div class="row">
-                  <div class="col-md-3">
-                    <h5 class="text-white">Berry Shopping</h5>
-                    <ul>
-                      <li><a href="#">Seasonal Picks</a></li>
-                      <li><a href="#">Organic Collection</a></li>
-                      <li><a href="#">Gift Boxes</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-md-3">
-                    <h5 class="text-white">Our Roots</h5>
-                    <ul>
-                      <li><a href="#">About Our Farm</a></li>
-                      <li><a href="#">Sustainability</a></li>
-                      <li><a href="#">Meet the Growers</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-md-3">
-                    <h5 class="text-white">Help Center</h5>
-                    <ul>
-                      <li><a href="#">Shipping Policy</a></li>
-                      <li><a href="#">Freshness Guarantee</a></li>
-                      <li><a href="#">Contact Our Farmers</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-md-3">
-                    <h5 class="text-white">Berry Rewards</h5>
-                    <ul>
-                      <li><a href="#">Join Our Club</a></li>
-                      <li><a href="#">Earn Points</a></li>
-                      <li><a href="#">Refer a Friend</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Payment & Copyright -->
-              <div class="payment-image text-center mb-25">
-                <p class="text-white mb-2">We accept:</p>
-                <img src="{% static 'assets/img/payment/payment.png' %}" alt="Payment methods">
-              </div>
-              <div class="copy-right-area text-center">
-                <p class="text-muted">
-                  © <span id="current-year"></span> Strawberry
-                  Grown with <i class="fas fa-heart text-danger"></i> in California.
-                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
-<!-- footer-end -->
+    </footer>
+    <!-- footer-end -->
 
-<style>
-  /* Berry-themed styles */
-  .berry-social {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    background: #ff4d6d;
-    color: white;
-    border-radius: 50%;
-    margin: 0 8px;
-    transition: all 0.3s;
-  }
+    <!-- JS here -->
+    <script src="{% static 'assets/js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/waypoints.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap-bundle.js' %}"></script>
+    <script src="{% static 'assets/js/meanmenu.js' %}"></script>
+    <script src="{% static 'assets/js/swiper-bundle.js' %}"></script>
+    <script src="{% static 'assets/js/tweenmax.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/magnific-popup.js' %}"></script>
+    <script src="{% static 'assets/js/parallax.js' %}"></script>
+    <script src="{% static 'assets/js/backtotop.js' %}"></script>
+    <script src="{% static 'assets/js/nice-select.js' %}"></script>
+    <script src="{% static 'assets/js/countdown.min.js' %}"></script>
+    <script src="{% static 'assets/js/counterup.js' %}"></script>
+    <script src="{% static 'assets/js/ui-slider-range.js' %}"></script>
+    <script src="{% static 'assets/js/wow.js' %}"></script>
+    <script src="{% static 'assets/js/isotope-pkgd.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded-pkgd.js' %}"></script>
+    <script src="{% static 'assets/js/ajax-form.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
 
-  .berry-social:hover {
-    background: #ff8fa3;
-    transform: translateY(-3px);
-  }
 
-  .berry-input {
-    padding: 12px 20px;
-    border: 2px solid #ffccd5;
-    border-radius: 30px;
-    width: 300px;
-    max-width: 100%;
-  }
 
-  .berry-btn {
-    background: #ff4d6d;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    margin-left: 10px;
-    font-weight: 600;
-    transition: all 0.3s;
-  }
+  </body>
 
-  .berry-btn:hover {
-    background: #c9184a;
-  }
-
-  .footer-links-grid h5 {
-    position: relative;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-  }
-
-  .footer-links-grid h5:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 2px;
-    background: #ff4d6d;
-  }
-
-  .footer-links-grid ul li {
-    margin-bottom: 8px;
-  }
-
-  .footer-links-grid ul li a:hover {
-    color: #ff4d6d !important;
-    padding-left: 5px;
-  }
-</style>
-
-<script>
-  // Auto-update copyright year
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
+  <!-- Mirrored from themepure.net/template/dukamarket/dukamarket/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Feb 2022 17:22:33 GMT -->
+</html>

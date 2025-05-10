@@ -6,7 +6,7 @@
 <main>
 
     <!-- page-banner-area-start -->
-    <div class="page-banner-area page-banner-height-2" data-background="{% static 'assets/img/banner/Vendor register.jpg' %}">
+    <div class="page-banner-area page-banner-height-2" data-background="{% static 'assets/img/banner/page-banner-4.jpg' %}">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -75,259 +75,54 @@
         </div>
     </div>
     <!-- account-area-end -->
-<!-- Strawberry CTA Section -->
-<section class="strawberry-cta">
-  <div class="container">
-    <div class="row">
-      <!-- Social Media Card -->
-      <div class="col-lg-4 col-md-6">
-        <div class="cta-card berry-social-card">
-          <div class="berry-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <h5>Join Our Berry Patch</h5>
-          <p>Connect with our growing community of strawberry lovers</p>
-          <div class="berry-social-links">
-            <a href="#" class="berry-social-btn insta-berry">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="berry-social-btn fb-berry">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="berry-social-btn tiktok-berry">
-              <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="#" class="berry-social-btn pin-berry">
-              <i class="fab fa-pinterest-p"></i>
-            </a>
-            <a href="#" class="berry-social-btn youtube-berry">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Newsletter Card -->
-      <div class="col-lg-4 col-md-6">
-        <div class="cta-card berry-newsletter-card">
-          <div class="berry-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <h5>Sweet Deals Newsletter</h5>
-          <p>Get weekly berry specials + 15% off your first order</p>
-          <div class="berry-subscribe-form">
-            <form action="#">
-              <input type="email" placeholder="your.email@berrygood.com">
-              <button type="submit">
-                Subscribe
-                <i class="fas fa-arrow-right"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+    <!-- cta-area-start -->
+<section class="cta-area d-ldark-bg pt-55 pb-10">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="cta-item cta-item-d mb-30">
+                    <h5 class="cta-title" style="color: #ff2e63;">Strawberry Social</h5>
+                    <p style="color: #b8b8b8;">Follow us for sweet deals and fresh updates</p>
+                    <div class="cta-social">
+                        <div class="social-icon" style="display: flex; gap: 12px;">
+                            <a href="#" style="background: #ff2e63;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="background: #ff2e63;"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" style="background: #ff2e63;"><i class="fab fa-telegram"></i></a>
+                            <a href="#" style="background: #ff2e63;"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="cta-item mb-30">
+                    <h5 class="cta-title" style="color: #ff2e63;">Sweet Newsletter</h5>
+                    <p style="color: #b8b8b8;">Get weekly strawberry-flavored discounts</p>
+                    <div class="subscribe__form">
+                        <form action="#">
+                            <input type="email" placeholder="Your email...">
+                            <button style="background: #ff2e63;">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="cta-item mb-30">
+                    <h5 class="cta-title" style="color: #ff2e63;">Strawberry App</h5>
+                    <p style="color: #b8b8b8;">Pick fresh deals on the go with our app</p>
+                   <div class="cta-apps">
+                        <div class="apps-store">
+                             <a href="#"><img src="assets/img/brand/app_ios.png" alt=""> </a>
 
-      <!-- App Download Card -->
-      <div class="col-lg-4 col-md-6">
-        <div class="cta-card berry-app-card">
-          <div class="berry-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h5>Berry Mobile Experience</h5>
-          <p>Get our app for exclusive mobile-only offers</p>
-          <div class="berry-app-badges">
-            <a href="#" class="app-badge">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-            </a>
-            <a href="#" class="app-badge">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
-
-            </a>
-          </div>
+                                <a href="#"><img src="assets/img/brand/app_android.png" alt=""> </a>
+                            </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
-
-<style>
-  /* Strawberry CTA Section */
-  .strawberry-cta {
-    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
-    padding: 60px 0;
-    border-top: 1px solid #ffebee;
-    border-bottom: 1px solid #ffebee;
-  }
-
-  .cta-card {
-    background: white;
-    border-radius: 16px;
-    padding: 30px;
-    height: 100%;
-    box-shadow: 0 10px 30px rgba(255, 77, 109, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.15);
-  }
-
-  .berry-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .cta-card h5 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 15px;
-    position: relative;
-  }
-
-  .cta-card h5:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 40px;
-    height: 3px;
-    background: linear-gradient(90deg, #ff4d6d, #ff8fa3);
-    border-radius: 3px;
-  }
-
-  .cta-card p {
-    color: #666;
-    margin-bottom: 25px;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  /* Social Media Card */
-  .berry-social-links {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .berry-social-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 16px;
-    transition: all 0.3s;
-  }
-
-  .insta-berry { background: #E1306C; }
-  .fb-berry { background: #3B5998; }
-  .tiktok-berry { background: #000; }
-  .pin-berry { background: #E60023; }
-  .youtube-berry { background: #FF0000; }
-
-  .berry-social-btn:hover {
-    transform: scale(1.1) rotate(10deg);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  /* Newsletter Card */
-  .berry-subscribe-form {
-    position: relative;
-  }
-
-  .berry-subscribe-form input {
-    width: 100%;
-    padding: 14px 20px;
-    border: 1px solid #ffccd5;
-    border-radius: 30px;
-    font-size: 15px;
-    transition: all 0.3s;
-  }
-
-  .berry-subscribe-form input:focus {
-    border-color: #ff4d6d;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.2);
-  }
-
-  .berry-subscribe-form button {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    background: linear-gradient(45deg, #ff4d6d, #c9184a);
-    color: white;
-    border: none;
-    padding: 9px 20px;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s;
-  }
-
-  .berry-subscribe-form button:hover {
-    background: linear-gradient(45deg, #c9184a, #ff4d6d);
-    transform: translateX(5px);
-  }
-
-  /* App Download Card */
-  .berry-app-badges {
-    display: flex;
-    gap: 10px;
-  }
-
-  .app-badge {
-    display: inline-block;
-    height: 45px;
-    transition: transform 0.3s;
-  }
-
-  .app-badge:hover {
-    transform: scale(1.05);
-  }
-
-  .app-badge img {
-    height: 100%;
-    border-radius: 7px;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 992px) {
-    .cta-card {
-      margin-bottom: 30px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .strawberry-cta {
-      padding: 40px 0;
-    }
-
-    .berry-social-links {
-      justify-content: center;
-    }
-
-    .berry-app-badges {
-      justify-content: center;
-    }
-  }
-</style>
+    </section>
+    <!-- cta-area-end -->
 
 </main>
 {% endblock bodycontent %}
