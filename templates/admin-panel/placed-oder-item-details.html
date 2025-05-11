@@ -2,7 +2,7 @@
 
 
 {% block admin-page-title %}
-    Placed Oder Item Details
+    Placed Order Item Details
 {% endblock admin-page-title %}
     
 {% block admin-body %}
@@ -50,7 +50,7 @@
                     <p>${{placed_oder.sub_total_price|floatformat:2}}</p>
                 </div>
                 <div class="col-6">
-                    <h6>Oder Status</h6>
+                    <h6>Order Status</h6>
                     <p class='btn btn-success'>{{placed_oder.status}}</p>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                 </textarea>
             </div>
             <div class="oder-placed-date">
-                <h6>Oder Placed: <small>{{placed_oder.placed_date}}</small></h6>
+                <h6>Order Placed: <small>{{placed_oder.placed_date}}</small></h6>
                 
             </div>
             
@@ -76,7 +76,7 @@
 
     <div class="col-sm-9 offset-sm-1 mb-5 mt-5">
         <div>
-            <h3>Oder Details:</h3>
+            <h3>Order Details:</h3>
         </div>
 
         <form method="POST">

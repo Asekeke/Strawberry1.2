@@ -15,13 +15,13 @@ class OderManagementAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         # Если заказ отгружен — переносим его в CompletedOder
-        if change and obj.status == 'Oder Shipped':
+        if change and obj.status == 'Order Shipped':
             completed = CompletedOder.objects.create(
                 user=obj.user,
                 shipping_address=obj.shipping_address,
                 sub_total_price=obj.sub_total_price,
                 paid=obj.paid,
-                status='Oder Shipped',
+                status='Order Shipped',
                 oder_number=obj.order_number
             )
             items = obj.order_items.all()

@@ -1,7 +1,7 @@
 {% load custom_filters %}
 <div class="container">
     
-     <h2>Placed Oder:-</h2>
+     <h2>Placed Order:-</h2>
      <hr>
     {% for key, value in placed_oders_by_oder_id.items %}
     <div class="row"> 
@@ -44,7 +44,7 @@
                     <p>${{value.0.sub_total_price|floatformat:2}}</p>
                 </div>
                 <div class="col-6">
-                    <h5>Oder Status</h5>
+                    <h5>Order Status</h5>
                     <p class='btn btn-success'>{{value.0.status}}</p>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                 </textarea>
             </div>
             <div class="oder-placed-date">
-                <h6>Oder Placed</h6>
+                <h6>Order Placed</h6>
                 <p>{{value.0.placed_date}}</p>
             </div>
             
@@ -69,14 +69,14 @@
     {% endfor %}
 
 
-    <h2>Completed Oders:</h2>
+    <h2>Completed Orders:</h2>
     <hr>
     
     {% for oders in completed_order %}
     <div
         class="table-responsive"
     >
-    <h4>Oder {{forloop.counter}}</h4>
+    <h4>Order {{forloop.counter}}</h4>
         <table
             class="table table-secondary"
         >
@@ -85,7 +85,7 @@
                     <th scope="col">Product</th>
                     <th scope="col">Sub Total Price</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Oder Number</th>
+                    <th scope="col">Order Number</th>
                 </tr>
             </thead>
             <tbody>
