@@ -192,7 +192,7 @@ table.table td h2 a {
 	color: #333;
 }
 table.table td h2 a:hover {
-	color: #FFBC53;
+	color: #c21859;
 }
 table.table td h2 span {
 	color: #888;
@@ -407,7 +407,7 @@ button.bg-danger:hover {
 }
 .text-primary,
 .dropdown-menu > li > a.text-primary {
-	color: #FFBC53 !important;
+	color: #ca6cb2 !important;
 }
 .text-success,
 .dropdown-menu > li > a.text-success {
@@ -1672,7 +1672,7 @@ footer p {
 	line-height: 40px;
 }
 .sidebar-menu li.menu-title a {
-    color: #ff9b44;
+    color: #c21859;
     display: inline-block;
     margin-left: auto;
     padding: 0;
@@ -2727,7 +2727,7 @@ table.table-inbox tbody tr.checked {
 	padding: 13px 18px;
 }
 .bg-eight .db-icon {
-	background-color: #19affb;
+	background-color: #633db9;
 	padding: 13px 18px;
 }
 .bg-nine .db-icon {
@@ -2739,7 +2739,7 @@ table.table-inbox tbody tr.checked {
 	padding: 13px 21px;
 }
 .bg-eleven .db-icon {
-	background-color: #19affb;
+	background-color: #725ec6;
 	padding: 13px 21px;
 }
 .lesson {
@@ -2778,7 +2778,7 @@ table.table-inbox tbody tr.checked {
 .lesson a {
 	font-size: 12px;
 	font-weight: 500;
-	color: #3bbafd;
+	color: #633db9;
 }
 .lesson .btn {
 	font-size: 14px;
@@ -2994,22 +2994,22 @@ table.table-inbox tbody tr.checked {
     margin-bottom: 10px;
     margin-right: 10px;
     color: #ffffff;
-    background: #009efb;
+    background: #725ec6;
 }
 .dash-widget1 .dash-btn .btn:last-child {
 	margin-right: 0;
 }
 .dash-widget1 .dash-btn .btn:hover {
-	color: #009efb;
+	color: #725ec6;
     background: transparent;
 }
 .dash-widget1 .dash-btn .btn-border {
-    color: #009efb;
+    color: #725ec6;
     background: transparent;
 }
 .dash-widget1 .dash-btn .btn-border:hover {
 	color: #ffffff;
-    background: #009efb;
+    background: #725ec6;
 }
 .view-link {
 	font-size: 14px;
@@ -3059,7 +3059,7 @@ table.table-inbox tbody tr.checked {
 @media (min-width: 992px) {
 	#toggle_btn {
 		align-items: center;
-		color: #18aefa;
+		color: #725ec6;
 		display: inline-flex;
 		float: left;
 		font-size: 26px;
@@ -3147,7 +3147,7 @@ table.table-inbox tbody tr.checked {
 		padding: 0px 50px;
 	}
 	.mobile_btn {
-		color: #18aefa !important;
+		color: #725ec6 !important;
 		cursor: pointer;
 		display: block;
 		font-size: 24px;
@@ -3191,10 +3191,10 @@ table.table-inbox tbody tr.checked {
 		transition: all 0.4s ease;
 	}
 	.user-menu.nav > li > a {
-		color: #18aefa;
+		color: #ca6cb2;
 	}
 	.user-menu.nav > li > a .badge {
-		background-color: #FFBC53;
+		background-color: #725ec6;
 		color: #fff;
 	}
 	.user-menu.nav > li > a:hover i, .user-menu.nav > li > a:focus i {
