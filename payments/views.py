@@ -7,30 +7,31 @@ import os
 from dotenv import load_dotenv
 from products.models import Cart
 
-# Create your views here.
+# Загружаем секретные переменные из .env
 load_dotenv()
 stripe.api_key = os.getenv('SECRET_KEY')
 
 
+# Функция для создания checkout сессии
 def create_checkout_session(request):
-    if request.method == 'POST': 
+    if request.method == 'POST':
         try:
-            print( "Initial---------", request.POST)
-            # get_customer = stripe.Customer.search(query="email:'farad.alam@gmail.com'")
+            print("Initial---------", request.POST)
 
+            # Получаем продукты из корзины пользователя
             cart_products = Cart.objects.filter(user=request.user).values()
             cart_product_list = list(cart_products)
-            
-            # Serialize cart_product_list to JSON
+
+            # Сериализуем список продуктов корзины в JSON
             serialized_cart_products = json.dumps(cart_product_list, cls=DjangoJSONEncoder)
             print(serialized_cart_products)
 
+            # Получаем сумму для оплаты
             subtotal = Cart.subtotal_product_price(request.user)
-            amount = subtotal*100
-         
-            # Create a PaymentIntent with the order amount and currency
+            amount = subtotal * 100  # Сумма в центах
+
+            # Создаем PaymentIntent с нужной суммой и валютой
             intent = stripe.PaymentIntent.create(
-                # customer= customer,
                 amount=int(amount),
                 currency='usd',
                 automatic_payment_methods={'enabled': True},
@@ -38,57 +39,71 @@ def create_checkout_session(request):
             )
 
             print(intent.client_secret)
-            print('paymentIntent===', intent)
             return JsonResponse({'clientSecret': intent.client_secret})
-            
+
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=403)
 
 
-# Display Payment Details with products
+# Функция для отображения деталей платежа
 def display_payment_details(request):
     cart_products = Cart.objects.filter(user=request.user)
 
     context = {
-        'cart_products':cart_products,
+        'cart_products': cart_products,
         'payable': Cart.subtotal_product_price(request.user)
     }
 
-    return render(request,'payments/payment.html', context)
+    return render(request, 'payments/payment.html', context)
 
 
-from products.views import placed_oder
-
+# Функция для обработки успешного платежа
 def payment_success(request):
-    payment_intent_id= request.GET.get('payment_intent')
+    payment_intent_id = request.GET.get('payment_intent')
     email = request.user.email
-    # print(email)
-    # After make payment placed the oder
+
+    # После успешного платежа размещаем заказ
     oder_placed = placed_oder(request)
+
+    # Ищем клиента по email
     get_customer = stripe.Customer.search(query=f'email:"{email}"')
     if get_customer:
         customer = get_customer['data'][0]
-    else:                  
+    else:
         customer = stripe.Customer.create(
-            name= request.user.first_name,
+            name=request.user.first_name,
             email=request.user.email,
             description="Creating user for purchasing product"
         )
         print(customer)
 
-    # updating the wxisting payment intent
+    # Обновляем существующий PaymentIntent
     payment_intent = stripe.PaymentIntent.modify(
         payment_intent_id,
-        metadata = {'oder_id': oder_placed},
-        customer = customer
-       
+        metadata={'oder_id': oder_placed},
+        customer=customer
     )
     print(payment_intent)
     amount_paid = payment_intent['amount_received'] / 100
 
     context = {
-        "payment_intent":payment_intent,
+        "payment_intent": payment_intent,
         "amount_paid": amount_paid
     }
 
-    return render(request,'payments/success.html',context)
+    return render(request, 'payments/success.html', context)
+
+
+# Функция для применения купона
+def apply_coupon(request):
+    if request.method == 'POST':
+        coupon_code = request.POST.get('cupon_code')
+
+        # Логика для проверки и применения купона (замените на вашу)
+        if coupon_code == "valid_coupon_code":  # Пример, замените на реальную логику
+            # Логика применения купона
+            messages.success(request, "Купон успешно применен!")
+        else:
+            messages.error(request, "Неверный купон!")
+
+    return redirect('display_payment_details')  # Перенаправляем обратно на страницу с деталями платежа
